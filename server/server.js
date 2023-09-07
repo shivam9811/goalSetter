@@ -34,6 +34,9 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(errorHandler);
 
+app.get("/hello", (req, res) => {
+  res.send("hello");
+});
 app.listen(port, async () => {
   console.log("server started on port", port);
 });
