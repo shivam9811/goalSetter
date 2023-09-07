@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const Api_url = "/api/users/";
+const Api_url = "https://goal-setter-five.vercel.app/api/users/";
 
 const register = async (userData) => {
   const response = await axios.post(Api_url, userData);
