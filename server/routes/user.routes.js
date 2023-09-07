@@ -12,9 +12,6 @@ const { protect } = require("../middleware/auth.middleware");
 router.post("/", registerUser);
 
 router.post("/login", loginUser);
-router.get("/", (req, res) => {
-  res.send("hello");
-});
 
 router.get("/me", protect, getUserData);
 
