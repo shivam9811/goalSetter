@@ -13,13 +13,15 @@ const addGoal = async (goalData, token) => {
 };
 
 const getGoals = async (token) => {
-  const config = {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  };
-  const response = await axios.get(API_URL, config);
-  return response.data;
+  if (token) {
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    const response = await axios.get(API_URL, config);
+    return response.data;
+  }
 };
 
 const deleteGoal = async (id, token) => {
